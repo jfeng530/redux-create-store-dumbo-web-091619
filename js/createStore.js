@@ -34,12 +34,12 @@ store.dispatch({ type: '@@INIT'})
 
 function render() {
   let container = document.getElementById('container');
-  container.textContent = state.count;
+  container.textContent = store.getState().count;
 };
 
 dispatch({ type: '@@INIT' })
 let button = document.getElementById('button');
 
 button.addEventListener('click', function() {
-    dispatch({ type: 'INCREASE_COUNT' });
+    store.dispatch({ type: 'INCREASE_COUNT' });
 })

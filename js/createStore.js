@@ -19,6 +19,9 @@ function reducer(state = { count: 0 }, action) {
   }
 };
 
+let store = createStore();
+store.dispatch({ type: '@@INIT'})
+
 
 function render() {
   let container = document.getElementById('container');
